@@ -41,7 +41,7 @@ rem now to load it and process it.
 
 Set objFSO = CreateObject("Scripting.FileSystemObject") 
 
-exportFile=sFileSelected + ".sov"
+exportFile=sFileSelected + ".sov.csv"
 
 i=0
 if objFSO.FileExists(sFileSelected) then
