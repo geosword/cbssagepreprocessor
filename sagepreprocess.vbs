@@ -87,6 +87,7 @@ if objFSO.FileExists(sFileSelected) then
 	Set sovFile = objFSO.CreateTextFile(exportFile,True)
 	dim dictItems
 	dictItems = writeRecords.Items
+	sovFile.Write "type,account,nom,dept,date,ref name,gross,vat,code,tax" & vbCrLf
 	for Each record in dictItems
 		rem Wscript.Echo record(TRANSTYPE) & "," & record(DOCID) & " " & record(AMOUNT) & " " & record(DESCRIPTION)
 		sovFile.Write Join(record,",") & vbCrLf
